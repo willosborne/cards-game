@@ -1,0 +1,26 @@
+#+STARTUP: logdone
+
+* High priority [0/6]
+** TODO Rendering in-game windows [0/1]
+Use 8-sprite method - 4 corner sprites and 4 scalable edge sprites
+*** TODO Work out how to draw sub-sprites
+** TODO Timer reactions
+*** TODO Arc animation for timers
+** TODO Pop open window to request other cards during reaction
+** TODO More advanced reaction definitions than just input+output
+** TODO Get some sprites going!
+* Medium priority [0/10]
+** TODO Animations for reactions
+** TODO More intelligent positioning for spawned cards
+** TODO Area system design/basic implementation
+** TODO Basic tweening engine
+** TODO Work out how to scale window/do fullscreen
+** TODO Style cards a little
+** TODO Drop shadow
+** TODO Shortcuts - shift-click
+** TODO Start work on initial areas
+** TODO Sound effects!
+* Low priority [0/2]
+** TODO [#C] Polish glow effects
+** TODO [#C] System to easily build binaries
+* Done!
