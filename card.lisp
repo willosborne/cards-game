@@ -37,6 +37,7 @@
     :initarg :type
     :reader type)
    (image
+    :initarg :image
     :accessor image)
    (name
     :initarg :name
@@ -44,7 +45,7 @@
    (description
     :initarg :description
     :reader description)
-   (yeet
+   (defined-p
     :initarg :defined-p
     :reader defined-p)))
 
@@ -53,8 +54,12 @@
     (format stream "Type: :~a" (type object))))
 
 (defmethod render ((card renderable))
-  (with-slots (position) card
+  (with-slots (position image) card
     (gamekit:draw-rect position +card-width+ +card-height+ :fill-paint *light-grey* :stroke-paint *black*)
+    (with-pushed-canvas ()
+      (translate-canvas (x position) (y position))
+      (scale-canvas 0.1 0.1)
+      (draw-image (vec2 0 0) image))
     (render-name card)))
 
 (defun render-name (card)

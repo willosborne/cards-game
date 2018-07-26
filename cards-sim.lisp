@@ -86,10 +86,10 @@
     (let ((target (add *mouse-pos* *grab-offset*)))
       (setf (position-of *grabbed-card*) (lerp (position-of *grabbed-card*) target 0.4)))))
 
-(defvar *panel* (make-instance 'panel :render-image :panel-template
-                               :width 256
-                               :height 256
-                               :position (vec2 100 0)))
+;; (defvar *panel* (make-instance 'panel :render-image :panel-template
+;;                                :width 256
+;;                                :height 256
+;;                                :position (vec2 100 0)))
 
 (defmethod gamekit:draw ((app cards-sim))
   (when *grabbed-card*
@@ -107,7 +107,8 @@
   ;;             :origin (vec2 16 16)
   ;;             :width 100
   ;;             :height 100)
-  (render *panel*))
+  ;; (render *panel*)
+  )
 
 (defun run ()
   (unless (gamekit:gamekit)

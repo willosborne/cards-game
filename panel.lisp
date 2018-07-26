@@ -25,24 +25,20 @@
     :initform (error "Must supply render texture!")
     :accessor render-image)))
 
-(defun (setf width) (value panel)
-  (setf (slot-value panel 'width) 
-        (* (section-width panel) (max 1 (floor (/ value (section-width panel)))))))
+;; (defun (setf width) (value panel)
+;;   (setf (slot-value panel 'width) 
+;;         (* (section-width panel) (max 1 (floor (/ value (section-width panel)))))))
 
-(defun (setf height) (value panel)
-  (setf (slot-value panel 'height) 
-        (* (section-height panel) (max 1 (floor (/ value (section-height panel)))))))
+;; (defun (setf height) (value panel)
+;;   (setf (slot-value panel 'height) 
+;;         (* (section-height panel) (max 1 (floor (/ value (section-height panel)))))))
 
-(defun (setf x) (value panel)
-  (setf (x (position-of panel)) value))
+;; (defun (setf x) (value panel)
+;;   (setf (x (position-of panel)) value))
 
-(defun (setf y) (value panel)
-  (setf (y (position-of panel)) value))
+;; (defun (setf y) (value panel)
+;;   (setf (y (position-of panel)) value))
 
-(defgeneric (setf width) (value panel))
-(defgeneric (setf height) (value panel))
-
-(defmethod (setf width) (panel panel))
 
 (defmethod render ((panel panel))
   (with-slots (width height section-width section-height image) panel

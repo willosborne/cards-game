@@ -3,7 +3,7 @@
 (defvar *canvas-width* 800)
 (defvar *canvas-height* 600)
 
-(defconstant +card-width+ 60)
+(defconstant +card-width+ 70)
 (defconstant +card-height+ 100)
 
 (defvar *black* (gamekit:vec4 0 0 0 1))
